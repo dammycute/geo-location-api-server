@@ -11,8 +11,8 @@ import os
 class HelloView(APIView):
     def get(self,request):
         visitor_name = request.query_params.get('visitor_name', 'Guest')
-        # client_ip  = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
-        client_ip = '105.112.17.199'
+        client_ip  = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
+        # client_ip = '105.112.17.199'
         # print(client_ip)
         # Geting location based on visitor ip address
         
