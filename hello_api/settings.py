@@ -53,8 +53,8 @@ INSTALLED_APPS = [
 
 WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
 
-if not WEATHER_API_KEY:
-    print("The thing still never work o.")
+# if not WEATHER_API_KEY:
+    # print("The thing still never work o.")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,6 +131,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 STATIC_URL = 'static/'
 
